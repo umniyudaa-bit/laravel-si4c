@@ -14,8 +14,13 @@ class FakultasController extends Controller
     {
         //akses model fakultas 
         $result = Fakultas::all(); //select * from fakultas
-        dd($result); //dump data 
-        // kirim data ke view
+        //dd($result); //dump data 
+        //kirim data fakultas ke view
+        //return view('fakultas.index)->with("Fakultas,$result);
+        //atau compact
+        return view('fakultas.index',compact('result'));
+    
+       // kirim data fakulkutas 
     }
 
     /**

@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('fakultas', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_fakultas');
-            $table->string('dekan');
-            $table->string('singkatan');
+            $table->string('nama', 50);
+            $table->string('dekan', 30);
+            $table->string('singkatan', 4);
             $table->timestamps();
         });
     }
